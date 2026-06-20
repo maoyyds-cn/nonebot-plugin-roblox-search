@@ -33,7 +33,7 @@ __plugin_meta__ = PluginMetadata(
 """.strip(),
     type="application",
     homepage="https://github.com/maoyyds-cn/nonebot-plugin-roblox-search",
-    supported_adapters={"nonebot.adapters.onebot.v11"},
+    supported_adapters={"~onebot.v11"},
 )
 
 # 导出模块，NoneBot自动加载所有命令
