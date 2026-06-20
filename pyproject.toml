@@ -10,7 +10,7 @@ authors = [
   { name = "MrMao", email = "admin@maoyyds.cn" }
 ]
 readme = "README.md"
-license = { text = "MIT" }
+license = "MIT"
 requires-python = ">=3.10"
 keywords = ["nonebot2", "roblox", "onebot-v11", "查询", "游戏"]
 dependencies = [
@@ -23,7 +23,6 @@ classifiers = [
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
   "Framework :: NoneBot",
-  "License :: OSI Approved :: MIT License",
   "Operating System :: OS Independent"
 ]
 
