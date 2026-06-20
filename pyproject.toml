@@ -33,12 +33,4 @@ Repository = "https://github.com/maoyyds-cn/nonebot-plugin-roblox-search.git"
 packages = ["nonebot_plugin_roblox_search"]
 
 [tool.nonebot]
-plugin_dirs = []
-builtin_plugins = []
-[tool.nonebot.plugins]
-"@local" = ["nonebot_plugin_roblox_search"]
-
-
-[tool.nonebot.adapters]
-"@local" = []
-nonebot-adapter-onebot = [{name = "OneBot V11", module_name = "nonebot.adapters.onebot.v11"}]
+plugins = ["nonebot_plugin_roblox_search"]
