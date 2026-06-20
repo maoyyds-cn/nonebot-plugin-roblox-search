@@ -105,7 +105,7 @@ async def handle_group_id_search(event: Event):
         await roblox_group_id_search.finish(output)
 
     except ActionFailed:
-        raise
+        await roblox_group_id_search.finish("消息发送失败，可能是bot被禁言或对方已离线")
     except Exception as e:
         print("[群组ID搜索错误]", traceback.format_exc())
         await roblox_group_id_search.finish(f"查询失败：{str(e)}")

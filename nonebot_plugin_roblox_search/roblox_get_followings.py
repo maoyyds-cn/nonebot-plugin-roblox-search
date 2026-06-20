@@ -94,7 +94,7 @@ async def handle_get_followings(event: Event):
         await roblox_get_followings.finish(output.strip())
 
     except ActionFailed:
-        raise
+        await roblox_get_followings.finish("消息发送失败，可能是bot被禁言或对方已离线")
     except Exception as e:
         print("[获取关注列表错误]", traceback.format_exc())
         await roblox_get_followings.finish(f"获取失败：{str(e)}")

@@ -156,7 +156,7 @@ async def handle_user_id_search(event: Event):
         await roblox_user_id_search.finish(msg)
 
     except ActionFailed:
-        raise
+        await roblox_user_id_search.finish("消息发送失败，可能是bot被禁言或对方已离线")
     except Exception as e:
         print("[用户ID搜索错误]", traceback.format_exc())
         await roblox_user_id_search.finish(f"查询失败：{str(e)}")
