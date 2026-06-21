@@ -4,7 +4,7 @@ import traceback
 import time
 from nonebot import on_keyword
 from nonebot.adapters.onebot.v11 import Event, Message, MessageSegment
-from nonebot.exception import ActionFailed
+from nonebot.exception import ActionFailed, FinishedException
 
 HEADERS = [
     "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
@@ -108,6 +108,8 @@ async def handle_game_id_search(event: Event):
         
         await roblox_game_id_search.finish(output)
 
+    except FinishedException:
+        raise
     except ActionFailed:
         await roblox_game_id_search.finish("消息发送失败，可能是bot被禁言或对方已离线")
     except Exception as e:
