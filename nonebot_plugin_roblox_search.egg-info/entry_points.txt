@@ -1,0 +1,2 @@
+[nonebot.plugin]
+nonebot_plugin_roblox_search = nonebot_plugin_roblox_search
